@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://br8v1gtkbfxge"]
+
+[ext_resource type="Texture2D" path="res://fase1_caminho.png" id="1_7yfwc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kn4d"]
+size = Vector2(156.55365, 70.25098)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2y2p"]
+size = Vector2(292, 104.5)
+
+[node name="Fase_01" type="Node2D" unique_id=238411598]
+position = Vector2(490, 335)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=517098475]
+position = Vector2(-519, -326)
+texture = ExtResource("1_7yfwc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1132831495]
+z_index = 1
+position = Vector2(-289, 1374.0001)
+rotation = -0.97007835
+shape = SubResource("RectangleShape2D_5kn4d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D" unique_id=252996024]
+z_index = 1
+position = Vector2(-328.3534, 113.46033)
+rotation = -0.78454506
+shape = SubResource("RectangleShape2D_e2y2p")

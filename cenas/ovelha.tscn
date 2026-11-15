@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ovelha.gd" id="1_script"]
+[ext_resource type="SpriteFrames" path="res://arte/armadilha/ovelha_frames.tres" id="2_frames"]
+[ext_resource type="AudioStream" path="res://sons/efeitos/som_arbusto.mp3" id="3_arbusto"]
+
+[node name="Ovelha" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2.2, 2.2)
+sprite_frames = ExtResource("2_frames")
+animation = &"escondida"
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="SomAparecer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_arbusto")

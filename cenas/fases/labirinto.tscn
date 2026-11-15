@@ -1,0 +1,2348 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://arte/fundos/fase3_labirinto.png" id="1_fundo"]
+[ext_resource type="PackedScene" path="res://cenas/Jogador.tscn" id="2_jogador"]
+[ext_resource type="PackedScene" path="res://cenas/ovelha.tscn" id="3_ovelha"]
+[ext_resource type="Texture2D" path="res://arte/fundos/nuvem_inicio.png" id="4_nuvemi"]
+[ext_resource type="Texture2D" path="res://arte/fundos/nuvem_fim.png" id="5_nuvemf"]
+[ext_resource type="AudioStream" path="res://sons/musicas/musica_lofi_outono.wav" id="6_musica"]
+[ext_resource type="Script" path="res://scripts/musica.gd" id="7_musica"]
+[ext_resource type="Script" path="res://scripts/fim.gd" id="8_fim"]
+[ext_resource type="Script" path="res://scripts/entrada.gd" id="9_entrada"]
+
+[sub_resource type="RectangleShape2D" id="Sebe_0"]
+size = Vector2(1261, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_1"]
+size = Vector2(962, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_2"]
+size = Vector2(13, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_3"]
+size = Vector2(13, 416)
+
+[sub_resource type="RectangleShape2D" id="Sebe_4"]
+size = Vector2(13, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_5"]
+size = Vector2(13, 390)
+
+[sub_resource type="RectangleShape2D" id="Sebe_6"]
+size = Vector2(13, 286)
+
+[sub_resource type="RectangleShape2D" id="Sebe_7"]
+size = Vector2(143, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_8"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_9"]
+size = Vector2(26, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_10"]
+size = Vector2(104, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_11"]
+size = Vector2(182, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_12"]
+size = Vector2(143, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_13"]
+size = Vector2(117, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_14"]
+size = Vector2(78, 182)
+
+[sub_resource type="RectangleShape2D" id="Sebe_15"]
+size = Vector2(130, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_16"]
+size = Vector2(117, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_17"]
+size = Vector2(104, 1651)
+
+[sub_resource type="RectangleShape2D" id="Sebe_18"]
+size = Vector2(13, 169)
+
+[sub_resource type="RectangleShape2D" id="Sebe_19"]
+size = Vector2(104, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_20"]
+size = Vector2(104, 1521)
+
+[sub_resource type="RectangleShape2D" id="Sebe_21"]
+size = Vector2(13, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_22"]
+size = Vector2(13, 104)
+
+[sub_resource type="RectangleShape2D" id="Sebe_23"]
+size = Vector2(13, 52)
+
+[sub_resource type="RectangleShape2D" id="Sebe_24"]
+size = Vector2(39, 195)
+
+[sub_resource type="RectangleShape2D" id="Sebe_25"]
+size = Vector2(26, 182)
+
+[sub_resource type="RectangleShape2D" id="Sebe_26"]
+size = Vector2(13, 182)
+
+[sub_resource type="RectangleShape2D" id="Sebe_27"]
+size = Vector2(26, 143)
+
+[sub_resource type="RectangleShape2D" id="Sebe_28"]
+size = Vector2(26, 156)
+
+[sub_resource type="RectangleShape2D" id="Sebe_29"]
+size = Vector2(299, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_30"]
+size = Vector2(195, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_31"]
+size = Vector2(26, 429)
+
+[sub_resource type="RectangleShape2D" id="Sebe_32"]
+size = Vector2(26, 702)
+
+[sub_resource type="RectangleShape2D" id="Sebe_33"]
+size = Vector2(26, 390)
+
+[sub_resource type="RectangleShape2D" id="Sebe_34"]
+size = Vector2(65, 52)
+
+[sub_resource type="RectangleShape2D" id="Sebe_35"]
+size = Vector2(26, 416)
+
+[sub_resource type="RectangleShape2D" id="Sebe_36"]
+size = Vector2(26, 403)
+
+[sub_resource type="RectangleShape2D" id="Sebe_37"]
+size = Vector2(52, 39)
+
+[sub_resource type="RectangleShape2D" id="Sebe_38"]
+size = Vector2(13, 637)
+
+[sub_resource type="RectangleShape2D" id="Sebe_39"]
+size = Vector2(13, 182)
+
+[sub_resource type="RectangleShape2D" id="Sebe_40"]
+size = Vector2(13, 338)
+
+[sub_resource type="RectangleShape2D" id="Sebe_41"]
+size = Vector2(91, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_42"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_43"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_44"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_45"]
+size = Vector2(104, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_46"]
+size = Vector2(26, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_47"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_48"]
+size = Vector2(104, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_49"]
+size = Vector2(13, 312)
+
+[sub_resource type="RectangleShape2D" id="Sebe_50"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_51"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_52"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_53"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_54"]
+size = Vector2(65, 572)
+
+[sub_resource type="RectangleShape2D" id="Sebe_55"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_56"]
+size = Vector2(65, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_57"]
+size = Vector2(13, 156)
+
+[sub_resource type="RectangleShape2D" id="Sebe_58"]
+size = Vector2(13, 130)
+
+[sub_resource type="RectangleShape2D" id="Sebe_59"]
+size = Vector2(247, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_60"]
+size = Vector2(260, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_61"]
+size = Vector2(247, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_62"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_63"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_64"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_65"]
+size = Vector2(13, 52)
+
+[sub_resource type="RectangleShape2D" id="Sebe_66"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_67"]
+size = Vector2(52, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_68"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_69"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_70"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_71"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_72"]
+size = Vector2(26, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_73"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_74"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_75"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_76"]
+size = Vector2(13, 130)
+
+[sub_resource type="RectangleShape2D" id="Sebe_77"]
+size = Vector2(260, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_78"]
+size = Vector2(845, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_79"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_80"]
+size = Vector2(26, 689)
+
+[sub_resource type="RectangleShape2D" id="Sebe_81"]
+size = Vector2(13, 65)
+
+[sub_resource type="RectangleShape2D" id="Sebe_82"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_83"]
+size = Vector2(91, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_84"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_85"]
+size = Vector2(65, 39)
+
+[sub_resource type="RectangleShape2D" id="Sebe_86"]
+size = Vector2(52, 520)
+
+[sub_resource type="RectangleShape2D" id="Sebe_87"]
+size = Vector2(13, 494)
+
+[sub_resource type="RectangleShape2D" id="Sebe_88"]
+size = Vector2(13, 429)
+
+[sub_resource type="RectangleShape2D" id="Sebe_89"]
+size = Vector2(923, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_90"]
+size = Vector2(260, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_91"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_92"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_93"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_94"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_95"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_96"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_97"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_98"]
+size = Vector2(65, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_99"]
+size = Vector2(117, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_100"]
+size = Vector2(182, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_101"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_102"]
+size = Vector2(130, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_103"]
+size = Vector2(130, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_104"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_105"]
+size = Vector2(104, 221)
+
+[sub_resource type="RectangleShape2D" id="Sebe_106"]
+size = Vector2(559, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_107"]
+size = Vector2(26, 1313)
+
+[sub_resource type="RectangleShape2D" id="Sebe_108"]
+size = Vector2(26, 416)
+
+[sub_resource type="RectangleShape2D" id="Sebe_109"]
+size = Vector2(260, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_110"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_111"]
+size = Vector2(26, 1287)
+
+[sub_resource type="RectangleShape2D" id="Sebe_112"]
+size = Vector2(26, 1287)
+
+[sub_resource type="RectangleShape2D" id="Sebe_113"]
+size = Vector2(26, 403)
+
+[sub_resource type="RectangleShape2D" id="Sebe_114"]
+size = Vector2(26, 390)
+
+[sub_resource type="RectangleShape2D" id="Sebe_115"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_116"]
+size = Vector2(91, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_117"]
+size = Vector2(13, 1209)
+
+[sub_resource type="RectangleShape2D" id="Sebe_118"]
+size = Vector2(13, 351)
+
+[sub_resource type="RectangleShape2D" id="Sebe_119"]
+size = Vector2(13, 312)
+
+[sub_resource type="RectangleShape2D" id="Sebe_120"]
+size = Vector2(78, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_121"]
+size = Vector2(13, 1196)
+
+[sub_resource type="RectangleShape2D" id="Sebe_122"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_123"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_124"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_125"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_126"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_127"]
+size = Vector2(169, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_128"]
+size = Vector2(26, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_129"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_130"]
+size = Vector2(130, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_131"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_132"]
+size = Vector2(104, 520)
+
+[sub_resource type="RectangleShape2D" id="Sebe_133"]
+size = Vector2(91, 2431)
+
+[sub_resource type="RectangleShape2D" id="Sebe_134"]
+size = Vector2(13, 832)
+
+[sub_resource type="RectangleShape2D" id="Sebe_135"]
+size = Vector2(13, 169)
+
+[sub_resource type="RectangleShape2D" id="Sebe_136"]
+size = Vector2(13, 156)
+
+[sub_resource type="RectangleShape2D" id="Sebe_137"]
+size = Vector2(91, 2301)
+
+[sub_resource type="RectangleShape2D" id="Sebe_138"]
+size = Vector2(13, 130)
+
+[sub_resource type="RectangleShape2D" id="Sebe_139"]
+size = Vector2(325, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_140"]
+size = Vector2(260, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_141"]
+size = Vector2(26, 1612)
+
+[sub_resource type="RectangleShape2D" id="Sebe_142"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_143"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_144"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_145"]
+size = Vector2(26, 1586)
+
+[sub_resource type="RectangleShape2D" id="Sebe_146"]
+size = Vector2(26, 1586)
+
+[sub_resource type="RectangleShape2D" id="Sebe_147"]
+size = Vector2(13, 104)
+
+[sub_resource type="RectangleShape2D" id="Sebe_148"]
+size = Vector2(13, 52)
+
+[sub_resource type="RectangleShape2D" id="Sebe_149"]
+size = Vector2(13, 858)
+
+[sub_resource type="RectangleShape2D" id="Sebe_150"]
+size = Vector2(13, 169)
+
+[sub_resource type="RectangleShape2D" id="Sebe_151"]
+size = Vector2(13, 390)
+
+[sub_resource type="RectangleShape2D" id="Sebe_152"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_153"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_154"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_155"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_156"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_157"]
+size = Vector2(65, 195)
+
+[sub_resource type="RectangleShape2D" id="Sebe_158"]
+size = Vector2(26, 169)
+
+[sub_resource type="RectangleShape2D" id="Sebe_159"]
+size = Vector2(52, 182)
+
+[sub_resource type="RectangleShape2D" id="Sebe_160"]
+size = Vector2(13, 1300)
+
+[sub_resource type="RectangleShape2D" id="Sebe_161"]
+size = Vector2(13, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_162"]
+size = Vector2(13, 156)
+
+[sub_resource type="RectangleShape2D" id="Sebe_163"]
+size = Vector2(26, 143)
+
+[sub_resource type="RectangleShape2D" id="Sebe_164"]
+size = Vector2(26, 416)
+
+[sub_resource type="RectangleShape2D" id="Sebe_165"]
+size = Vector2(247, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_166"]
+size = Vector2(117, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_167"]
+size = Vector2(494, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_168"]
+size = Vector2(26, 403)
+
+[sub_resource type="RectangleShape2D" id="Sebe_169"]
+size = Vector2(26, 390)
+
+[sub_resource type="RectangleShape2D" id="Sebe_170"]
+size = Vector2(26, 390)
+
+[sub_resource type="RectangleShape2D" id="Sebe_171"]
+size = Vector2(13, 325)
+
+[sub_resource type="RectangleShape2D" id="Sebe_172"]
+size = Vector2(91, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_173"]
+size = Vector2(13, 312)
+
+[sub_resource type="RectangleShape2D" id="Sebe_174"]
+size = Vector2(78, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_175"]
+size = Vector2(13, 338)
+
+[sub_resource type="RectangleShape2D" id="Sebe_176"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_177"]
+size = Vector2(117, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_178"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_179"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_180"]
+size = Vector2(26, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_181"]
+size = Vector2(26, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_182"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_183"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_184"]
+size = Vector2(78, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_185"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_186"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_187"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_188"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_189"]
+size = Vector2(26, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_190"]
+size = Vector2(39, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_191"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_192"]
+size = Vector2(65, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_193"]
+size = Vector2(13, 247)
+
+[sub_resource type="RectangleShape2D" id="Sebe_194"]
+size = Vector2(13, 156)
+
+[sub_resource type="RectangleShape2D" id="Sebe_195"]
+size = Vector2(13, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_196"]
+size = Vector2(26, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_197"]
+size = Vector2(13, 221)
+
+[sub_resource type="RectangleShape2D" id="Sebe_198"]
+size = Vector2(13, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_199"]
+size = Vector2(13, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_200"]
+size = Vector2(13, 858)
+
+[sub_resource type="RectangleShape2D" id="Sebe_201"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_202"]
+size = Vector2(13, 130)
+
+[sub_resource type="RectangleShape2D" id="Sebe_203"]
+size = Vector2(221, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_204"]
+size = Vector2(325, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_205"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_206"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_207"]
+size = Vector2(26, 1690)
+
+[sub_resource type="RectangleShape2D" id="Sebe_208"]
+size = Vector2(13, 715)
+
+[sub_resource type="RectangleShape2D" id="Sebe_209"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_210"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_211"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_212"]
+size = Vector2(52, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_213"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_214"]
+size = Vector2(65, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_215"]
+size = Vector2(104, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_216"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_217"]
+size = Vector2(65, 663)
+
+[sub_resource type="RectangleShape2D" id="Sebe_218"]
+size = Vector2(13, 1547)
+
+[sub_resource type="RectangleShape2D" id="Sebe_219"]
+size = Vector2(39, 195)
+
+[sub_resource type="RectangleShape2D" id="Sebe_220"]
+size = Vector2(39, 169)
+
+[sub_resource type="RectangleShape2D" id="Sebe_221"]
+size = Vector2(26, 169)
+
+[sub_resource type="RectangleShape2D" id="Sebe_222"]
+size = Vector2(13, 156)
+
+[sub_resource type="RectangleShape2D" id="Sebe_223"]
+size = Vector2(13, 156)
+
+[sub_resource type="RectangleShape2D" id="Sebe_224"]
+size = Vector2(299, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_225"]
+size = Vector2(195, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_226"]
+size = Vector2(26, 403)
+
+[sub_resource type="RectangleShape2D" id="Sebe_227"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_228"]
+size = Vector2(13, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_229"]
+size = Vector2(13, 312)
+
+[sub_resource type="RectangleShape2D" id="Sebe_230"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_231"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_232"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_233"]
+size = Vector2(13, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_234"]
+size = Vector2(104, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_235"]
+size = Vector2(26, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_236"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_237"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_238"]
+size = Vector2(65, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_239"]
+size = Vector2(26, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_240"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_241"]
+size = Vector2(13, 260)
+
+[sub_resource type="RectangleShape2D" id="Sebe_242"]
+size = Vector2(1157, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_243"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_244"]
+size = Vector2(52, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_245"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_246"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_247"]
+size = Vector2(195, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_248"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_249"]
+size = Vector2(130, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_250"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_251"]
+size = Vector2(104, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_252"]
+size = Vector2(13, 923)
+
+[sub_resource type="RectangleShape2D" id="Sebe_253"]
+size = Vector2(13, 195)
+
+[sub_resource type="RectangleShape2D" id="Sebe_254"]
+size = Vector2(52, 897)
+
+[sub_resource type="RectangleShape2D" id="Sebe_255"]
+size = Vector2(13, 143)
+
+[sub_resource type="RectangleShape2D" id="Sebe_256"]
+size = Vector2(13, 39)
+
+[sub_resource type="RectangleShape2D" id="Sebe_257"]
+size = Vector2(260, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_258"]
+size = Vector2(325, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_259"]
+size = Vector2(26, 403)
+
+[sub_resource type="RectangleShape2D" id="Sebe_260"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_261"]
+size = Vector2(26, 390)
+
+[sub_resource type="RectangleShape2D" id="Sebe_262"]
+size = Vector2(13, 780)
+
+[sub_resource type="RectangleShape2D" id="Sebe_263"]
+size = Vector2(13, 312)
+
+[sub_resource type="RectangleShape2D" id="Sebe_264"]
+size = Vector2(13, 338)
+
+[sub_resource type="RectangleShape2D" id="Sebe_265"]
+size = Vector2(91, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_266"]
+size = Vector2(13, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_267"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_268"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_269"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_270"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_271"]
+size = Vector2(117, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_272"]
+size = Vector2(104, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_273"]
+size = Vector2(78, 195)
+
+[sub_resource type="RectangleShape2D" id="Sebe_274"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_275"]
+size = Vector2(65, 273)
+
+[sub_resource type="RectangleShape2D" id="Sebe_276"]
+size = Vector2(13, 260)
+
+[sub_resource type="RectangleShape2D" id="Sebe_277"]
+size = Vector2(13, 416)
+
+[sub_resource type="RectangleShape2D" id="Sebe_278"]
+size = Vector2(13, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_279"]
+size = Vector2(13, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_280"]
+size = Vector2(13, 130)
+
+[sub_resource type="RectangleShape2D" id="Sebe_281"]
+size = Vector2(13, 130)
+
+[sub_resource type="RectangleShape2D" id="Sebe_282"]
+size = Vector2(221, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_283"]
+size = Vector2(546, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_284"]
+size = Vector2(260, 117)
+
+[sub_resource type="RectangleShape2D" id="Sebe_285"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_286"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_287"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_288"]
+size = Vector2(65, 52)
+
+[sub_resource type="RectangleShape2D" id="Sebe_289"]
+size = Vector2(52, 26)
+
+[sub_resource type="RectangleShape2D" id="Sebe_290"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_291"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_292"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_293"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_294"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_295"]
+size = Vector2(26, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_296"]
+size = Vector2(78, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_297"]
+size = Vector2(39, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_298"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_299"]
+size = Vector2(39, 247)
+
+[sub_resource type="RectangleShape2D" id="Sebe_300"]
+size = Vector2(13, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_301"]
+size = Vector2(13, 234)
+
+[sub_resource type="RectangleShape2D" id="Sebe_302"]
+size = Vector2(13, 221)
+
+[sub_resource type="RectangleShape2D" id="Sebe_303"]
+size = Vector2(13, 221)
+
+[sub_resource type="RectangleShape2D" id="Sebe_304"]
+size = Vector2(13, 221)
+
+[sub_resource type="RectangleShape2D" id="Sebe_305"]
+size = Vector2(845, 208)
+
+[sub_resource type="RectangleShape2D" id="Sebe_306"]
+size = Vector2(559, 208)
+
+[sub_resource type="RectangleShape2D" id="Sebe_307"]
+size = Vector2(39, 208)
+
+[sub_resource type="RectangleShape2D" id="Sebe_308"]
+size = Vector2(377, 208)
+
+[sub_resource type="RectangleShape2D" id="Sebe_309"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_310"]
+size = Vector2(26, 91)
+
+[sub_resource type="RectangleShape2D" id="Sebe_311"]
+size = Vector2(13, 39)
+
+[sub_resource type="RectangleShape2D" id="Sebe_312"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_313"]
+size = Vector2(13, 13)
+
+[sub_resource type="RectangleShape2D" id="Sebe_314"]
+size = Vector2(200, 4612)
+
+[sub_resource type="RectangleShape2D" id="Sebe_315"]
+size = Vector2(200, 4612)
+
+[sub_resource type="RectangleShape2D" id="Sebe_316"]
+size = Vector2(2896, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gatilho"]
+size = Vector2(260, 80)
+
+[node name="Labirinto" type="Node2D"]
+
+[node name="Fundo" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_fundo")
+centered = false
+
+[node name="Paredes" type="StaticBody2D" parent="."]
+
+[node name="Sebe0" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(630.5, 117)
+shape = SubResource("Sebe_0")
+
+[node name="Sebe1" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2015, 117)
+shape = SubResource("Sebe_1")
+
+[node name="Sebe2" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1267.5, 175.5)
+shape = SubResource("Sebe_2")
+
+[node name="Sebe3" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1527.5, 325)
+shape = SubResource("Sebe_3")
+
+[node name="Sebe4" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1280.5, 175.5)
+shape = SubResource("Sebe_4")
+
+[node name="Sebe5" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1514.5, 325)
+shape = SubResource("Sebe_5")
+
+[node name="Sebe6" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1501.5, 338)
+shape = SubResource("Sebe_6")
+
+[node name="Sebe7" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(71.5, 240.5)
+shape = SubResource("Sebe_7")
+
+[node name="Sebe8" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(331.5, 240.5)
+shape = SubResource("Sebe_8")
+
+[node name="Sebe9" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(741, 240.5)
+shape = SubResource("Sebe_9")
+
+[node name="Sebe10" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1586, 240.5)
+shape = SubResource("Sebe_10")
+
+[node name="Sebe11" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2145, 240.5)
+shape = SubResource("Sebe_11")
+
+[node name="Sebe12" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2424.5, 240.5)
+shape = SubResource("Sebe_12")
+
+[node name="Sebe13" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(58.5, 253.5)
+shape = SubResource("Sebe_13")
+
+[node name="Sebe14" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1573, 338)
+shape = SubResource("Sebe_14")
+
+[node name="Sebe15" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2145, 253.5)
+shape = SubResource("Sebe_15")
+
+[node name="Sebe16" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2437.5, 253.5)
+shape = SubResource("Sebe_16")
+
+[node name="Sebe17" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(52, 1085.5)
+shape = SubResource("Sebe_17")
+
+[node name="Sebe18" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1488.5, 344.5)
+shape = SubResource("Sebe_18")
+
+[node name="Sebe19" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2145, 377)
+shape = SubResource("Sebe_19")
+
+[node name="Sebe20" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2444, 1020.5)
+shape = SubResource("Sebe_20")
+
+[node name="Sebe21" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1618.5, 344.5)
+shape = SubResource("Sebe_21")
+
+[node name="Sebe22" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1475.5, 351)
+shape = SubResource("Sebe_22")
+
+[node name="Sebe23" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1631.5, 351)
+shape = SubResource("Sebe_23")
+
+[node name="Sebe24" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1007.5, 474.5)
+shape = SubResource("Sebe_24")
+
+[node name="Sebe25" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(975, 481)
+shape = SubResource("Sebe_25")
+
+[node name="Sebe26" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1033.5, 481)
+shape = SubResource("Sebe_26")
+
+[node name="Sebe27" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(949, 474.5)
+shape = SubResource("Sebe_27")
+
+[node name="Sebe28" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1053, 481)
+shape = SubResource("Sebe_28")
+
+[node name="Sebe29" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(786.5, 474.5)
+shape = SubResource("Sebe_29")
+
+[node name="Sebe30" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1163.5, 474.5)
+shape = SubResource("Sebe_30")
+
+[node name="Sebe31" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1846, 630.5)
+shape = SubResource("Sebe_31")
+
+[node name="Sebe32" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(624, 780)
+shape = SubResource("Sebe_32")
+
+[node name="Sebe33" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1274, 624)
+shape = SubResource("Sebe_33")
+
+[node name="Sebe34" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1566.5, 455)
+shape = SubResource("Sebe_34")
+
+[node name="Sebe35" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1820, 637)
+shape = SubResource("Sebe_35")
+
+[node name="Sebe36" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1872, 630.5)
+shape = SubResource("Sebe_36")
+
+[node name="Sebe37" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1560, 500.5)
+shape = SubResource("Sebe_37")
+
+[node name="Sebe38" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(604.5, 812.5)
+shape = SubResource("Sebe_38")
+
+[node name="Sebe39" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1293.5, 585)
+shape = SubResource("Sebe_39")
+
+[node name="Sebe40" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1891.5, 663)
+shape = SubResource("Sebe_40")
+
+[node name="Sebe41" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2138.5, 500.5)
+shape = SubResource("Sebe_41")
+
+[node name="Sebe42" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2145, 513.5)
+shape = SubResource("Sebe_42")
+
+[node name="Sebe43" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1553.5, 526.5)
+shape = SubResource("Sebe_43")
+
+[node name="Sebe44" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2145, 526.5)
+shape = SubResource("Sebe_44")
+
+[node name="Sebe45" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(689, 539.5)
+shape = SubResource("Sebe_45")
+
+[node name="Sebe46" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(923, 539.5)
+shape = SubResource("Sebe_46")
+
+[node name="Sebe47" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1085.5, 539.5)
+shape = SubResource("Sebe_47")
+
+[node name="Sebe48" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1209, 539.5)
+shape = SubResource("Sebe_48")
+
+[node name="Sebe49" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1800.5, 689)
+shape = SubResource("Sebe_49")
+
+[node name="Sebe50" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(676, 552.5)
+shape = SubResource("Sebe_50")
+
+[node name="Sebe51" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(955.5, 552.5)
+shape = SubResource("Sebe_51")
+
+[node name="Sebe52" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1072.5, 552.5)
+shape = SubResource("Sebe_52")
+
+[node name="Sebe53" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1222, 552.5)
+shape = SubResource("Sebe_53")
+
+[node name="Sebe54" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(669.5, 845)
+shape = SubResource("Sebe_54")
+
+[node name="Sebe55" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1046.5, 565.5)
+shape = SubResource("Sebe_55")
+
+[node name="Sebe56" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1228.5, 676)
+shape = SubResource("Sebe_56")
+
+[node name="Sebe57" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(110.5, 780)
+shape = SubResource("Sebe_57")
+
+[node name="Sebe58" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1904.5, 767)
+shape = SubResource("Sebe_58")
+
+[node name="Sebe59" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(240.5, 773.5)
+shape = SubResource("Sebe_59")
+
+[node name="Sebe60" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1664, 773.5)
+shape = SubResource("Sebe_60")
+
+[node name="Sebe61" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2034.5, 773.5)
+shape = SubResource("Sebe_61")
+
+[node name="Sebe62" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(377, 773.5)
+shape = SubResource("Sebe_62")
+
+[node name="Sebe63" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1521, 773.5)
+shape = SubResource("Sebe_63")
+
+[node name="Sebe64" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2171, 773.5)
+shape = SubResource("Sebe_64")
+
+[node name="Sebe65" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1293.5, 767)
+shape = SubResource("Sebe_65")
+
+[node name="Sebe66" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2190.5, 786.5)
+shape = SubResource("Sebe_66")
+
+[node name="Sebe67" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1235, 806)
+shape = SubResource("Sebe_67")
+
+[node name="Sebe68" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(370.5, 825.5)
+shape = SubResource("Sebe_68")
+
+[node name="Sebe69" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1248, 825.5)
+shape = SubResource("Sebe_69")
+
+[node name="Sebe70" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1527.5, 825.5)
+shape = SubResource("Sebe_70")
+
+[node name="Sebe71" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2164.5, 825.5)
+shape = SubResource("Sebe_71")
+
+[node name="Sebe72" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(130, 838.5)
+shape = SubResource("Sebe_72")
+
+[node name="Sebe73" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(266.5, 838.5)
+shape = SubResource("Sebe_73")
+
+[node name="Sebe74" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1865.5, 838.5)
+shape = SubResource("Sebe_74")
+
+[node name="Sebe75" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2067, 838.5)
+shape = SubResource("Sebe_75")
+
+[node name="Sebe76" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(708.5, 1066)
+shape = SubResource("Sebe_76")
+
+[node name="Sebe77" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(468, 1072.5)
+shape = SubResource("Sebe_77")
+
+[node name="Sebe78" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1137.5, 1072.5)
+shape = SubResource("Sebe_78")
+
+[node name="Sebe79" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(325, 1072.5)
+shape = SubResource("Sebe_79")
+
+[node name="Sebe80" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1573, 1371.5)
+shape = SubResource("Sebe_80")
+
+[node name="Sebe81" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1592.5, 1111.5)
+shape = SubResource("Sebe_81")
+
+[node name="Sebe82" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(331.5, 1124.5)
+shape = SubResource("Sebe_82")
+
+[node name="Sebe83" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1514.5, 1137.5)
+shape = SubResource("Sebe_83")
+
+[node name="Sebe84" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1521, 1150.5)
+shape = SubResource("Sebe_84")
+
+[node name="Sebe85" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1527.5, 1176.5)
+shape = SubResource("Sebe_85")
+
+[node name="Sebe86" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1534, 1456)
+shape = SubResource("Sebe_86")
+
+[node name="Sebe87" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1592.5, 1443)
+shape = SubResource("Sebe_87")
+
+[node name="Sebe88" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1501.5, 1475.5)
+shape = SubResource("Sebe_88")
+
+[node name="Sebe89" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(799.5, 1371.5)
+shape = SubResource("Sebe_89")
+
+[node name="Sebe90" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1729, 1371.5)
+shape = SubResource("Sebe_90")
+
+[node name="Sebe91" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(325, 1371.5)
+shape = SubResource("Sebe_91")
+
+[node name="Sebe92" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1274, 1371.5)
+shape = SubResource("Sebe_92")
+
+[node name="Sebe93" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1872, 1371.5)
+shape = SubResource("Sebe_93")
+
+[node name="Sebe94" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(331.5, 1423.5)
+shape = SubResource("Sebe_94")
+
+[node name="Sebe95" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1267.5, 1423.5)
+shape = SubResource("Sebe_95")
+
+[node name="Sebe96" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1865.5, 1423.5)
+shape = SubResource("Sebe_96")
+
+[node name="Sebe97" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(416, 1436.5)
+shape = SubResource("Sebe_97")
+
+[node name="Sebe98" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(500.5, 1436.5)
+shape = SubResource("Sebe_98")
+
+[node name="Sebe99" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(747.5, 1436.5)
+shape = SubResource("Sebe_99")
+
+[node name="Sebe100" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(949, 1436.5)
+shape = SubResource("Sebe_100")
+
+[node name="Sebe101" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1137.5, 1436.5)
+shape = SubResource("Sebe_101")
+
+[node name="Sebe102" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1664, 1436.5)
+shape = SubResource("Sebe_102")
+
+[node name="Sebe103" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(949, 1449.5)
+shape = SubResource("Sebe_103")
+
+[node name="Sebe104" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1605.5, 1449.5)
+shape = SubResource("Sebe_104")
+
+[node name="Sebe105" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(949, 1566.5)
+shape = SubResource("Sebe_105")
+
+[node name="Sebe106" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(383.5, 1670.5)
+shape = SubResource("Sebe_106")
+
+[node name="Sebe107" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1248, 2268.5)
+shape = SubResource("Sebe_107")
+
+[node name="Sebe108" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1846, 1820)
+shape = SubResource("Sebe_108")
+
+[node name="Sebe109" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2262, 1670.5)
+shape = SubResource("Sebe_109")
+
+[node name="Sebe110" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(676, 1670.5)
+shape = SubResource("Sebe_110")
+
+[node name="Sebe111" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1222, 2268.5)
+shape = SubResource("Sebe_111")
+
+[node name="Sebe112" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1274, 2268.5)
+shape = SubResource("Sebe_112")
+
+[node name="Sebe113" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1820, 1826.5)
+shape = SubResource("Sebe_113")
+
+[node name="Sebe114" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1872, 1820)
+shape = SubResource("Sebe_114")
+
+[node name="Sebe115" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2119, 1670.5)
+shape = SubResource("Sebe_115")
+
+[node name="Sebe116" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(942.5, 1683.5)
+shape = SubResource("Sebe_116")
+
+[node name="Sebe117" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1202.5, 2281.5)
+shape = SubResource("Sebe_117")
+
+[node name="Sebe118" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1800.5, 1852.5)
+shape = SubResource("Sebe_118")
+
+[node name="Sebe119" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1891.5, 1833)
+shape = SubResource("Sebe_119")
+
+[node name="Sebe120" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(949, 1703)
+shape = SubResource("Sebe_120")
+
+[node name="Sebe121" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1293.5, 2288)
+shape = SubResource("Sebe_121")
+
+[node name="Sebe122" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(669.5, 1722.5)
+shape = SubResource("Sebe_122")
+
+[node name="Sebe123" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(949, 1722.5)
+shape = SubResource("Sebe_123")
+
+[node name="Sebe124" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1547, 1722.5)
+shape = SubResource("Sebe_124")
+
+[node name="Sebe125" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2125.5, 1722.5)
+shape = SubResource("Sebe_125")
+
+[node name="Sebe126" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(123.5, 1735.5)
+shape = SubResource("Sebe_126")
+
+[node name="Sebe127" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(357.5, 1735.5)
+shape = SubResource("Sebe_127")
+
+[node name="Sebe128" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2379, 1735.5)
+shape = SubResource("Sebe_128")
+
+[node name="Sebe129" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(110.5, 1748.5)
+shape = SubResource("Sebe_129")
+
+[node name="Sebe130" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(351, 1748.5)
+shape = SubResource("Sebe_130")
+
+[node name="Sebe131" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2385.5, 1748.5)
+shape = SubResource("Sebe_131")
+
+[node name="Sebe132" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(351, 2015)
+shape = SubResource("Sebe_132")
+
+[node name="Sebe133" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2450.5, 2996.5)
+shape = SubResource("Sebe_133")
+
+[node name="Sebe134" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2398.5, 2223)
+shape = SubResource("Sebe_134")
+
+[node name="Sebe135" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(292.5, 1982.5)
+shape = SubResource("Sebe_135")
+
+[node name="Sebe136" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(409.5, 1976)
+shape = SubResource("Sebe_136")
+
+[node name="Sebe137" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(45.5, 3061.5)
+shape = SubResource("Sebe_137")
+
+[node name="Sebe138" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(422.5, 1976)
+shape = SubResource("Sebe_138")
+
+[node name="Sebe139" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(799.5, 1969.5)
+shape = SubResource("Sebe_139")
+
+[node name="Sebe140" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1664, 1969.5)
+shape = SubResource("Sebe_140")
+
+[node name="Sebe141" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2145, 2717)
+shape = SubResource("Sebe_141")
+
+[node name="Sebe142" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(624, 1969.5)
+shape = SubResource("Sebe_142")
+
+[node name="Sebe143" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(975, 1969.5)
+shape = SubResource("Sebe_143")
+
+[node name="Sebe144" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1521, 1969.5)
+shape = SubResource("Sebe_144")
+
+[node name="Sebe145" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2119, 2717)
+shape = SubResource("Sebe_145")
+
+[node name="Sebe146" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2171, 2717)
+shape = SubResource("Sebe_146")
+
+[node name="Sebe147" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(279.5, 1989)
+shape = SubResource("Sebe_147")
+
+[node name="Sebe148" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(266.5, 1989)
+shape = SubResource("Sebe_148")
+
+[node name="Sebe149" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(97.5, 2405)
+shape = SubResource("Sebe_149")
+
+[node name="Sebe150" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2099.5, 2060.5)
+shape = SubResource("Sebe_150")
+
+[node name="Sebe151" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2190.5, 2184)
+shape = SubResource("Sebe_151")
+
+[node name="Sebe152" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(630.5, 2021.5)
+shape = SubResource("Sebe_152")
+
+[node name="Sebe153" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(968.5, 2021.5)
+shape = SubResource("Sebe_153")
+
+[node name="Sebe154" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1527.5, 2021.5)
+shape = SubResource("Sebe_154")
+
+[node name="Sebe155" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1865.5, 2021.5)
+shape = SubResource("Sebe_155")
+
+[node name="Sebe156" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1709.5, 2034.5)
+shape = SubResource("Sebe_156")
+
+[node name="Sebe157" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1488.5, 2268.5)
+shape = SubResource("Sebe_157")
+
+[node name="Sebe158" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1443, 2268.5)
+shape = SubResource("Sebe_158")
+
+[node name="Sebe159" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1547, 2275)
+shape = SubResource("Sebe_159")
+
+[node name="Sebe160" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2099.5, 2834)
+shape = SubResource("Sebe_160")
+
+[node name="Sebe161" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1189.5, 2314)
+shape = SubResource("Sebe_161")
+
+[node name="Sebe162" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1423.5, 2275)
+shape = SubResource("Sebe_162")
+
+[node name="Sebe163" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1586, 2268.5)
+shape = SubResource("Sebe_163")
+
+[node name="Sebe164" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(650, 2418)
+shape = SubResource("Sebe_164")
+
+[node name="Sebe165" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1059.5, 2268.5)
+shape = SubResource("Sebe_165")
+
+[node name="Sebe166" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1358.5, 2268.5)
+shape = SubResource("Sebe_166")
+
+[node name="Sebe167" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1846, 2268.5)
+shape = SubResource("Sebe_167")
+
+[node name="Sebe168" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(624, 2424.5)
+shape = SubResource("Sebe_168")
+
+[node name="Sebe169" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(676, 2418)
+shape = SubResource("Sebe_169")
+
+[node name="Sebe170" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(923, 2418)
+shape = SubResource("Sebe_170")
+
+[node name="Sebe171" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(903.5, 2424.5)
+shape = SubResource("Sebe_171")
+
+[node name="Sebe172" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(344.5, 2281.5)
+shape = SubResource("Sebe_172")
+
+[node name="Sebe173" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(695.5, 2431)
+shape = SubResource("Sebe_173")
+
+[node name="Sebe174" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(351, 2301)
+shape = SubResource("Sebe_174")
+
+[node name="Sebe175" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(604.5, 2457)
+shape = SubResource("Sebe_175")
+
+[node name="Sebe176" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(351, 2320.5)
+shape = SubResource("Sebe_176")
+
+[node name="Sebe177" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(994.5, 2333.5)
+shape = SubResource("Sebe_177")
+
+[node name="Sebe178" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1144, 2333.5)
+shape = SubResource("Sebe_178")
+
+[node name="Sebe179" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1339, 2333.5)
+shape = SubResource("Sebe_179")
+
+[node name="Sebe180" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1404, 2333.5)
+shape = SubResource("Sebe_180")
+
+[node name="Sebe181" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1612, 2333.5)
+shape = SubResource("Sebe_181")
+
+[node name="Sebe182" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1807, 2333.5)
+shape = SubResource("Sebe_182")
+
+[node name="Sebe183" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2073.5, 2333.5)
+shape = SubResource("Sebe_183")
+
+[node name="Sebe184" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(975, 2353)
+shape = SubResource("Sebe_184")
+
+[node name="Sebe185" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1163.5, 2346.5)
+shape = SubResource("Sebe_185")
+
+[node name="Sebe186" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1326, 2346.5)
+shape = SubResource("Sebe_186")
+
+[node name="Sebe187" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1579.5, 2346.5)
+shape = SubResource("Sebe_187")
+
+[node name="Sebe188" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2086.5, 2346.5)
+shape = SubResource("Sebe_188")
+
+[node name="Sebe189" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1170, 2366)
+shape = SubResource("Sebe_189")
+
+[node name="Sebe190" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1319.5, 2366)
+shape = SubResource("Sebe_190")
+
+[node name="Sebe191" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1449.5, 2359.5)
+shape = SubResource("Sebe_191")
+
+[node name="Sebe192" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(968.5, 2483)
+shape = SubResource("Sebe_192")
+
+[node name="Sebe193" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(591.5, 2502.5)
+shape = SubResource("Sebe_193")
+
+[node name="Sebe194" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(708.5, 2457)
+shape = SubResource("Sebe_194")
+
+[node name="Sebe195" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1176.5, 2392)
+shape = SubResource("Sebe_195")
+
+[node name="Sebe196" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1313, 2392)
+shape = SubResource("Sebe_196")
+
+[node name="Sebe197" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(578.5, 2515.5)
+shape = SubResource("Sebe_197")
+
+[node name="Sebe198" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(721.5, 2463.5)
+shape = SubResource("Sebe_198")
+
+[node name="Sebe199" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1306.5, 2418)
+shape = SubResource("Sebe_199")
+
+[node name="Sebe200" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2190.5, 2860)
+shape = SubResource("Sebe_200")
+
+[node name="Sebe201" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(734.5, 2463.5)
+shape = SubResource("Sebe_201")
+
+[node name="Sebe202" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(565.5, 2561)
+shape = SubResource("Sebe_202")
+
+[node name="Sebe203" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(448.5, 2567.5)
+shape = SubResource("Sebe_203")
+
+[node name="Sebe204" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1696.5, 2567.5)
+shape = SubResource("Sebe_204")
+
+[node name="Sebe205" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(325, 2567.5)
+shape = SubResource("Sebe_205")
+
+[node name="Sebe206" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1521, 2567.5)
+shape = SubResource("Sebe_206")
+
+[node name="Sebe207" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1872, 3367)
+shape = SubResource("Sebe_207")
+
+[node name="Sebe208" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1891.5, 2931.5)
+shape = SubResource("Sebe_208")
+
+[node name="Sebe209" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(962, 2606.5)
+shape = SubResource("Sebe_209")
+
+[node name="Sebe210" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(331.5, 2619.5)
+shape = SubResource("Sebe_210")
+
+[node name="Sebe211" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(669.5, 2619.5)
+shape = SubResource("Sebe_211")
+
+[node name="Sebe212" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(949, 2619.5)
+shape = SubResource("Sebe_212")
+
+[node name="Sebe213" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1527.5, 2619.5)
+shape = SubResource("Sebe_213")
+
+[node name="Sebe214" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1592.5, 2632.5)
+shape = SubResource("Sebe_214")
+
+[node name="Sebe215" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1807, 2632.5)
+shape = SubResource("Sebe_215")
+
+[node name="Sebe216" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1820, 2645.5)
+shape = SubResource("Sebe_216")
+
+[node name="Sebe217" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1826.5, 2983.5)
+shape = SubResource("Sebe_217")
+
+[node name="Sebe218" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2398.5, 3438.5)
+shape = SubResource("Sebe_218")
+
+[node name="Sebe219" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(708.5, 2866.5)
+shape = SubResource("Sebe_219")
+
+[node name="Sebe220" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(669.5, 2866.5)
+shape = SubResource("Sebe_220")
+
+[node name="Sebe221" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(741, 2866.5)
+shape = SubResource("Sebe_221")
+
+[node name="Sebe222" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(643.5, 2873)
+shape = SubResource("Sebe_222")
+
+[node name="Sebe223" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(760.5, 2873)
+shape = SubResource("Sebe_223")
+
+[node name="Sebe224" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(487.5, 2866.5)
+shape = SubResource("Sebe_224")
+
+[node name="Sebe225" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(864.5, 2866.5)
+shape = SubResource("Sebe_225")
+
+[node name="Sebe226" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(325, 3022.5)
+shape = SubResource("Sebe_226")
+
+[node name="Sebe227" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(975, 2866.5)
+shape = SubResource("Sebe_227")
+
+[node name="Sebe228" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(97.5, 2886)
+shape = SubResource("Sebe_228")
+
+[node name="Sebe229" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(305.5, 3042)
+shape = SubResource("Sebe_229")
+
+[node name="Sebe230" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(968.5, 2918.5)
+shape = SubResource("Sebe_230")
+
+[node name="Sebe231" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1228.5, 2918.5)
+shape = SubResource("Sebe_231")
+
+[node name="Sebe232" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1267.5, 2918.5)
+shape = SubResource("Sebe_232")
+
+[node name="Sebe233" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(97.5, 2938)
+shape = SubResource("Sebe_233")
+
+[node name="Sebe234" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(390, 2931.5)
+shape = SubResource("Sebe_234")
+
+[node name="Sebe235" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(624, 2931.5)
+shape = SubResource("Sebe_235")
+
+[node name="Sebe236" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(786.5, 2931.5)
+shape = SubResource("Sebe_236")
+
+[node name="Sebe237" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(377, 2944.5)
+shape = SubResource("Sebe_237")
+
+[node name="Sebe238" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(370.5, 3068)
+shape = SubResource("Sebe_238")
+
+[node name="Sebe239" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(676, 2957.5)
+shape = SubResource("Sebe_239")
+
+[node name="Sebe240" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(734.5, 2957.5)
+shape = SubResource("Sebe_240")
+
+[node name="Sebe241" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(97.5, 3107)
+shape = SubResource("Sebe_241")
+
+[node name="Sebe242" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1215.5, 3165.5)
+shape = SubResource("Sebe_242")
+
+[node name="Sebe243" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(624, 3165.5)
+shape = SubResource("Sebe_243")
+
+[node name="Sebe244" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(364, 3198)
+shape = SubResource("Sebe_244")
+
+[node name="Sebe245" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(357.5, 3217.5)
+shape = SubResource("Sebe_245")
+
+[node name="Sebe246" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(630.5, 3217.5)
+shape = SubResource("Sebe_246")
+
+[node name="Sebe247" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(955.5, 3230.5)
+shape = SubResource("Sebe_247")
+
+[node name="Sebe248" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1774.5, 3230.5)
+shape = SubResource("Sebe_248")
+
+[node name="Sebe249" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(949, 3243.5)
+shape = SubResource("Sebe_249")
+
+[node name="Sebe250" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1787.5, 3243.5)
+shape = SubResource("Sebe_250")
+
+[node name="Sebe251" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(949, 3367)
+shape = SubResource("Sebe_251")
+
+[node name="Sebe252" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(97.5, 3750.5)
+shape = SubResource("Sebe_252")
+
+[node name="Sebe253" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2190.5, 3399.5)
+shape = SubResource("Sebe_253")
+
+[node name="Sebe254" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1833, 3763.5)
+shape = SubResource("Sebe_254")
+
+[node name="Sebe255" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1891.5, 3399.5)
+shape = SubResource("Sebe_255")
+
+[node name="Sebe256" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1800.5, 3386.5)
+shape = SubResource("Sebe_256")
+
+[node name="Sebe257" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(767, 3464.5)
+shape = SubResource("Sebe_257")
+
+[node name="Sebe258" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1397.5, 3464.5)
+shape = SubResource("Sebe_258")
+
+[node name="Sebe259" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(624, 3620.5)
+shape = SubResource("Sebe_259")
+
+[node name="Sebe260" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1222, 3464.5)
+shape = SubResource("Sebe_260")
+
+[node name="Sebe261" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1573, 3614)
+shape = SubResource("Sebe_261")
+
+[node name="Sebe262" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1800.5, 3822)
+shape = SubResource("Sebe_262")
+
+[node name="Sebe263" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1592.5, 3627)
+shape = SubResource("Sebe_263")
+
+[node name="Sebe264" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(604.5, 3653)
+shape = SubResource("Sebe_264")
+
+[node name="Sebe265" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(942.5, 3497)
+shape = SubResource("Sebe_265")
+
+[node name="Sebe266" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1891.5, 3510)
+shape = SubResource("Sebe_266")
+
+[node name="Sebe267" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(936, 3516.5)
+shape = SubResource("Sebe_267")
+
+[node name="Sebe268" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1228.5, 3516.5)
+shape = SubResource("Sebe_268")
+
+[node name="Sebe269" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2125.5, 3516.5)
+shape = SubResource("Sebe_269")
+
+[node name="Sebe270" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2164.5, 3516.5)
+shape = SubResource("Sebe_270")
+
+[node name="Sebe271" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(695.5, 3529.5)
+shape = SubResource("Sebe_271")
+
+[node name="Sebe272" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1508, 3529.5)
+shape = SubResource("Sebe_272")
+
+[node name="Sebe273" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(676, 3633.5)
+shape = SubResource("Sebe_273")
+
+[node name="Sebe274" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1521, 3542.5)
+shape = SubResource("Sebe_274")
+
+[node name="Sebe275" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1527.5, 3685.5)
+shape = SubResource("Sebe_275")
+
+[node name="Sebe276" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(591.5, 3692)
+shape = SubResource("Sebe_276")
+
+[node name="Sebe277" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1891.5, 3770)
+shape = SubResource("Sebe_277")
+
+[node name="Sebe278" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(578.5, 3705)
+shape = SubResource("Sebe_278")
+
+[node name="Sebe279" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(721.5, 3646.5)
+shape = SubResource("Sebe_279")
+
+[node name="Sebe280" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(565.5, 3757)
+shape = SubResource("Sebe_280")
+
+[node name="Sebe281" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1488.5, 3757)
+shape = SubResource("Sebe_281")
+
+[node name="Sebe282" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(448.5, 3763.5)
+shape = SubResource("Sebe_282")
+
+[node name="Sebe283" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1209, 3763.5)
+shape = SubResource("Sebe_283")
+
+[node name="Sebe284" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2262, 3763.5)
+shape = SubResource("Sebe_284")
+
+[node name="Sebe285" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(325, 3763.5)
+shape = SubResource("Sebe_285")
+
+[node name="Sebe286" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(923, 3763.5)
+shape = SubResource("Sebe_286")
+
+[node name="Sebe287" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2119, 3763.5)
+shape = SubResource("Sebe_287")
+
+[node name="Sebe288" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(669.5, 3757)
+shape = SubResource("Sebe_288")
+
+[node name="Sebe289" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(663, 3796)
+shape = SubResource("Sebe_289")
+
+[node name="Sebe290" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(331.5, 3815.5)
+shape = SubResource("Sebe_290")
+
+[node name="Sebe291" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(656.5, 3815.5)
+shape = SubResource("Sebe_291")
+
+[node name="Sebe292" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(929.5, 3815.5)
+shape = SubResource("Sebe_292")
+
+[node name="Sebe293" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1566.5, 3815.5)
+shape = SubResource("Sebe_293")
+
+[node name="Sebe294" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2125.5, 3815.5)
+shape = SubResource("Sebe_294")
+
+[node name="Sebe295" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(390, 3828.5)
+shape = SubResource("Sebe_295")
+
+[node name="Sebe296" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2210, 3828.5)
+shape = SubResource("Sebe_296")
+
+[node name="Sebe297" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2372.5, 3828.5)
+shape = SubResource("Sebe_297")
+
+[node name="Sebe298" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2385.5, 3841.5)
+shape = SubResource("Sebe_298")
+
+[node name="Sebe299" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1982.5, 4088.5)
+shape = SubResource("Sebe_299")
+
+[node name="Sebe300" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1956.5, 4095)
+shape = SubResource("Sebe_300")
+
+[node name="Sebe301" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2008.5, 4095)
+shape = SubResource("Sebe_301")
+
+[node name="Sebe302" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(110.5, 4101.5)
+shape = SubResource("Sebe_302")
+
+[node name="Sebe303" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1891.5, 4101.5)
+shape = SubResource("Sebe_303")
+
+[node name="Sebe304" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1943.5, 4101.5)
+shape = SubResource("Sebe_304")
+
+[node name="Sebe305" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(539.5, 4108)
+shape = SubResource("Sebe_305")
+
+[node name="Sebe306" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1514.5, 4108)
+shape = SubResource("Sebe_306")
+
+[node name="Sebe307" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1917.5, 4108)
+shape = SubResource("Sebe_307")
+
+[node name="Sebe308" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2203.5, 4108)
+shape = SubResource("Sebe_308")
+
+[node name="Sebe309" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(975, 4062.5)
+shape = SubResource("Sebe_309")
+
+[node name="Sebe310" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1222, 4062.5)
+shape = SubResource("Sebe_310")
+
+[node name="Sebe311" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(994.5, 4075.5)
+shape = SubResource("Sebe_311")
+
+[node name="Sebe312" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(968.5, 4114.5)
+shape = SubResource("Sebe_312")
+
+[node name="Sebe313" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1228.5, 4114.5)
+shape = SubResource("Sebe_313")
+
+[node name="Sebe314" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(-100, 2106)
+shape = SubResource("Sebe_314")
+
+[node name="Sebe315" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(2596, 2106)
+shape = SubResource("Sebe_315")
+
+[node name="Sebe316" type="CollisionShape2D" parent="Paredes"]
+position = Vector2(1248, 4312)
+shape = SubResource("Sebe_316")
+
+[node name="Jogador" parent="." instance=ExtResource("2_jogador")]
+position = Vector2(1048, 3931)
+
+[node name="Camera2D" parent="Jogador" index="3"]
+limit_left = 0
+limit_top = 0
+limit_right = 2496
+limit_bottom = 4212
+
+[node name="Ovelha1" parent="." instance=ExtResource("3_ovelha")]
+position = Vector2(2372, 3968)
+por_proximidade = true
+distancia_proximidade = 600.0
+
+[node name="Ovelha2" parent="." instance=ExtResource("3_ovelha")]
+position = Vector2(1462, 3562)
+por_proximidade = true
+distancia_proximidade = 280.0
+
+[node name="Ovelha3" parent="." instance=ExtResource("3_ovelha")]
+position = Vector2(864, 3263)
+por_proximidade = true
+distancia_proximidade = 280.0
+
+[node name="Ovelha4" parent="." instance=ExtResource("3_ovelha")]
+position = Vector2(1174, 2533)
+por_proximidade = true
+distancia_proximidade = 550.0
+
+[node name="Ovelha5" parent="." instance=ExtResource("3_ovelha")]
+position = Vector2(1517, 2493)
+por_proximidade = true
+distancia_proximidade = 600.0
+
+[node name="Ovelha6" parent="." instance=ExtResource("3_ovelha")]
+position = Vector2(1496, 2158)
+por_proximidade = true
+distancia_proximidade = 600.0
+
+[node name="Ovelha7" parent="." instance=ExtResource("3_ovelha")]
+position = Vector2(121, 1938)
+por_proximidade = true
+distancia_proximidade = 221.0
+
+[node name="Ovelha8" parent="." instance=ExtResource("3_ovelha")]
+position = Vector2(1183, 871)
+por_proximidade = true
+distancia_proximidade = 388.0
+
+[node name="Ovelha9" parent="." instance=ExtResource("3_ovelha")]
+position = Vector2(2374, 446)
+por_proximidade = true
+distancia_proximidade = 600.0
+
+[node name="NuvemInicio" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1248, 4142)
+scale = Vector2(1.7, 1.3)
+texture = ExtResource("4_nuvemi")
+
+[node name="NuvemFim" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1397, 20)
+texture = ExtResource("5_nuvemf")
+
+[node name="Fim" type="Area2D" parent="."]
+position = Vector2(1397, 160)
+script = ExtResource("8_fim")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fim"]
+shape = SubResource("RectangleShape2D_gatilho")
+
+[node name="Tela" type="CanvasLayer" parent="Fim"]
+layer = 10
+
+[node name="Nuvem" type="ColorRect" parent="Fim/Tela"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.875, 0.984, 0.827, 0)
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_musica")
+volume_db = -8.0
+autoplay = true
+script = ExtResource("7_musica")
+
+[node name="Entrada" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="Nuvem" type="ColorRect" parent="Entrada"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.875, 0.984, 0.827, 1)
+script = ExtResource("9_entrada")
+
+[editable path="Jogador"]

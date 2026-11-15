@@ -1,0 +1,232 @@
+ANOTACOES - JOGO LEVEL HAVEN (GODOT)
+====================================
+
+Ordem pra ler: 1) Godot basico  2) Caminho do jogo  3) Cada script  4) Quero mudar X
+
+
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+ 1) GODOT BASICO (comparando com Java)
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+- O que e um no (Node)?
+R: E uma pecinha do jogo. Cada no faz 1 coisa.
+   Ex: Sprite2D mostra imagem, CollisionShape2D e a hitbox, AudioStreamPlayer toca som, Label mostra texto, Timer conta tempo.
+
+- O que e uma cena (.tscn)?
+R: Varios nos juntos numa arvore. Tipo uma classe montada.
+   Ex: Jogador.tscn = CharacterBody2D + AnimatedSprite2D + CollisionShape2D + Camera2D + Label + SomMorrer.
+   Uma cena pode ir dentro de outra (o Jogador vai dentro da fase1).
+
+- O que e o script (.gd)?
+R: O codigo preso num no. E a "classe" desse no.
+   "extends CharacterBody2D" no topo = "esse script e um CharacterBody2D", igual ao extends do Java.
+
+- var e func?
+R: var = atributo, func = metodo. Nao tem tipo nem public/private.
+   -_-_-_-_
+   Java:    private float velocidade = 300f;
+   Godot:   var velocidade = 300.0
+
+   Java:    public void voltarAoInicio(){ ... }
+   Godot:   func voltar_ao_inicio():
+   -_-_-_-_
+
+- Cade as chavetas { }?
+R: Nao tem. O que manda e o TAB (igual Python). Tudo que ta com 1 tab a mais ta dentro do if/for/func.
+
+- O que e $Nome?
+R: Pega um no filho pelo nome. Tipo um getter.
+   $Label         = o no Label dentro do Jogador
+   $Tela/Nuvem    = o no Nuvem que ta dentro do no Tela
+   O nome tem que ser IGUAL ao do painel Cena (maiuscula conta).
+
+- _ready()?
+R: Roda 1 vez so, quando a cena abre. E o construtor.
+
+- _process(delta) e _physics_process(delta)?
+R: Rodam TODO FRAME (+-60 vezes por segundo), pra sempre. Tipo um while(true).
+   _physics_process e pra coisas que andam/batem (jogador). _process pro resto.
+   delta = quantos segundos passaram desde o ultimo frame (tipo 0.016).
+
+- O que e .connect()?
+R: "Quando X acontecer, chama a funcao Y". Liga um aviso (sinal) a uma funcao.
+   -_-_-_-_
+   $Timer.timeout.connect(atirar)
+   = quando o Timer acabar, chama atirar()
+   -_-_-_-_
+   Por isso tem funcoes que ninguem chama no codigo: o Godot chama sozinho.
+   Sinais que o jogo usa: finished (som/video acabou), animation_finished (animacao acabou),
+   timeout (timer), body_entered (alguem encostou na area), frame_changed (animacao trocou de frame).
+
+- Input.is_action_just_pressed("ui_accept")?
+R: true so no frame em que apertou. Segurando nao conta de novo.
+   ui_left/ui_right/ui_up/ui_down = setas (e WASD), ui_accept = espaco/enter.
+
+- Input.get_vector(...)?
+R: Junta as 4 setas num Vector2.
+   direita = (1, 0), esquerda = (-1, 0), cima = (0, -1), baixo = (0, 1), nada = (0, 0).
+   No Godot o Y pra CIMA e negativo.
+
+- Vector2, position e global_position?
+R: Vector2 = um ponto (x, y).
+   position = posicao em relacao ao pai, global_position = posicao no mapa todo.
+
+- O que e um tween?
+R: Muda um valor AOS POUCOS. Serve pra animar sem fazer frame.
+   -_-_-_-_
+   var tween = create_tween()
+   tween.tween_property($Fim, "modulate:a", 1.0, 1.0)
+   = a transparencia do $Fim vai ate 1.0 em 1 segundo (aparece devagar)
+   -_-_-_-_
+   tween_property(QUEM, "O QUE", VALOR FINAL, SEGUNDOS)
+   set_parallel(true)  = todos ao mesmo tempo (sem isso e um depois do outro)
+   set_trans(...)      = so o jeito do movimento (suave, com balanco). Pode ignorar.
+   set_delay(0.9)      = espera 0.9 s antes de comecar
+   set_loops()         = repete pra sempre
+
+- O que e await?
+R: "Espera isso acabar e so depois continua a funcao".
+   await tween.finished                           = espera o tween acabar
+   await get_tree().create_timer(1.5).timeout     = espera 1.5 segundos
+
+- modulate.a e color.a?
+R: Transparencia. 0 = invisivel, 1 = normal.
+
+- queue_free()?
+R: Apaga o no do jogo (ex: a pinha depois de cair).
+
+- get_tree().change_scene_to_file("res://...")?
+R: Troca de cena (vai pra outra fase). res:// = pasta do projeto.
+   reload_current_scene() = recomeca a mesma cena.
+
+- add_to_group("jogador") e get_first_node_in_group("jogador")?
+R: Grupo = etiqueta. O jogador se coloca no grupo "jogador" e a ovelha acha ele por essa etiqueta.
+
+- @export var?
+R: A variavel aparece no Inspetor do Godot e da pra mudar la sem abrir o codigo.
+   Ex: cada ovelha tem a sua distancia_proximidade.
+
+- get_parent()?
+R: Pega o no pai. Ex: na ovelha, get_parent() = a fase.
+
+- Area2D x CharacterBody2D?
+R: CharacterBody2D = coisa que anda e bate em parede (jogador). Usa move_and_slide().
+   Area2D = zona invisivel que so avisa quem entrou (buraco, pinha, fim da fase).
+   get_overlapping_bodies() = lista de quem ta dentro da area agora.
+
+
+
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+ 2) CAMINHO DO JOGO
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+cutscene.tscn  ->  fase1.tscn  ->  labirinto.tscn  ->  boss.tscn  ->  cutscene_final.tscn
+   (video)         (nuvem fim)      (nuvem fim)       (ganhou)       (enter volta pro inicio)
+
+- Quem troca de cena?
+R: cutscene.gd (video acabou -> fase1)
+   fim.gd na fase1 (proxima_cena = labirinto, ta no Inspetor)
+   fim.gd no labirinto (proxima_cena = boss, o valor padrao)
+   boss.gd (ganhou -> cutscene_final / perdeu -> recomeca o boss)
+   cutscene_final.gd (enter -> cutscene do inicio)
+
+
+
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+ 3) CADA SCRIPT
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+- jogador.gd (o ourico)?
+R: Todo frame: le as setas -> anda -> se apertou espaco pula -> escolhe a animacao (andar_cima, andar_baixo...).
+   voltar_ao_inicio() = morreu: som, mortes + 1, teleporta pro inicio.
+   cair_no_buraco() = encolhe ate sumir (tween) e chama voltar_ao_inicio().
+   caindo = true trava ele (o fim.gd tambem usa isso pra parar ele).
+
+- buraco.gd?
+R: Todo frame ve se o Jogador ta em cima. Se ta e NAO ta pulando:
+   esconde as folhas, mostra o buraco, chama cair_no_buraco(), espera 1.5 s e fecha.
+
+- ovelha.gd?
+R: Fica "escondida". Quando o ourico chega perto -> "aparecer" + som da moita.
+   Depois de aparecer liga o Timer. A cada 0.3 s o Timer chama atirar().
+   A pinha mesmo so nasce no frame 2 da animacao "atirar" (mudou_frame).
+   Se o ourico se afastar, esconde de novo.
+
+- pinha.gd?
+R: A ovelha chama iniciar(onde_ta_a_ovelha, onde_ta_o_ourico).
+   A pinha voa reto ate um pouco depois do ourico.
+   Encostou no ourico voando -> voltar_ao_inicio() e a pinha some.
+   Chegou no fim sem acertar -> "cair" -> "sumir" -> apaga.
+
+- fim.gd (nuvem do fim da fase)?
+R: Ourico encostou -> trava ele -> nuvem vai pro meio da tela e cresce
+   -> musica abaixa -> tela branca -> troca pra proxima_cena.
+
+- entrada.gd?
+R: Tela branca no comeco da fase que vai sumindo em 1 s (parece que saiu da nuvem).
+
+- musica.gd?
+R: Musica acabou -> toca de novo (loop).
+
+- cutscene.gd / cutscene_final.gd?
+R: Video acabou -> vai pra fase1.
+   No final: video acabou -> aparece "Fim" -> enter volta pro comeco.
+
+- notas_boss.gd?
+R: So uma lista. Cada nota = [segundo da musica, direcao, de quem e a vez].
+   direcao: 0 = esquerda, 1 = baixo, 2 = cima, 3 = direita.
+   Ex: [2.866, 0, "dino"] = no segundo 2.866 vem uma seta pra esquerda, na vez do dino.
+
+- boss.gd (a luta)?
+R: Todo frame:
+   1. pega o tempo da musica (tempo_musica)
+   2. apertou uma seta? -> apertar() procura a nota dessa direcao mais perto do agora.
+      Se ta a menos de 0.18 s (janela_acerto) = acertou, senao so afunda o alvo.
+   3. nota que passou do tempo e ninguem acertou = errou
+   4. ve de quem e a vez (ver_turno) e muda o texto
+   5. manda a pista desenhar
+   acertou() tira vida do dino, errou() tira vida do ourico.
+   Vida chegou a 0 -> vencer() ou perder().
+   estado[i] guarda como ta cada nota: "vindo", "acertou" ou "errou".
+
+- pista.gd?
+R: So DESENHA (nao decide nada). Desenha os 4 alvos e as setas que ainda tao "vindo".
+   Onde a seta ta: x = x_alvo + (tempo_da_nota - tempo_agora) * velocidade
+   Ex: faltando 1 s pra nota, ela ta 520 pixels a direita do alvo. Faltando 0 s, ta em cima do alvo.
+
+- tempo_musica() no boss.gd, porque essa conta?
+R: So get_playback_position() fica um pouco atrasado do som que sai na coluna.
+   As 2 contas do AudioServer corrigem isso. Nao precisa mexer.
+
+
+
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+ 4) QUERO MUDAR X, ONDE MEXO?
+-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+- Ourico mais rapido?
+R: jogador.gd -> velocidade (e velocidade_pulo pra quando pula).
+
+- Ovelha atirar mais ou menos?
+R: ovelha.gd -> tempo_entre_pinhas (maior = atira menos).
+
+- Ovelha aparecer mais cedo/tarde?
+R: Seleciona a ovelha na fase -> Inspetor -> distancia_proximidade.
+
+- Pinha mais lenta?
+R: pinha.gd -> velocidade.
+
+- Buraco ficar aberto mais tempo?
+R: buraco.gd -> o 1.5 do create_timer(1.5).
+
+- Boss mais facil?
+R: boss.gd -> janela_acerto maior (ex: 0.25) e/ou dano_erro_... menores.
+
+- Setas do boss mais rapidas?
+R: pista.gd -> velocidade.
+
+- Por as notas noutro tempo/direcao?
+R: notas_boss.gd -> muda os numeros da lista (tem que ficar em ordem de tempo).
+
+- Trocar a fase que vem depois?
+R: Seleciona o no do fim na fase -> Inspetor -> proxima_cena.

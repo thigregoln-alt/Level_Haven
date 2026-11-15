@@ -1,0 +1,121 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/boss.gd" id="1_boss"]
+[ext_resource type="Script" path="res://scripts/pista.gd" id="2_pista"]
+[ext_resource type="Texture2D" path="res://arte/fundos/boss_fundo.png" id="3_fundo"]
+[ext_resource type="SpriteFrames" path="res://arte/boss/dino_boss_frames.tres" id="4_dino"]
+[ext_resource type="SpriteFrames" path="res://arte/boss/ourico_costas_frames.tres" id="5_ourico"]
+[ext_resource type="AudioStream" path="res://sons/musicas/musica_boss.wav" id="6_musica"]
+[ext_resource type="FontFile" path="res://arte/interface/Darumadrop.ttf" id="7_fonte"]
+[ext_resource type="Texture2D" path="res://arte/boss/barra_fundo.png" id="8_bfundo"]
+[ext_resource type="Texture2D" path="res://arte/boss/barra_contorno.png" id="9_bcontorno"]
+[ext_resource type="Texture2D" path="res://arte/boss/barra_laranja.png" id="10_blaranja"]
+[ext_resource type="Texture2D" path="res://arte/boss/barra_verde.png" id="11_bverde"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nome"]
+font = ExtResource("7_fonte")
+font_size = 26
+font_color = Color(0.5, 0.3, 0.165, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vez"]
+font = ExtResource("7_fonte")
+font_size = 30
+font_color = Color(0.5, 0.3, 0.165, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fim"]
+font = ExtResource("7_fonte")
+font_size = 84
+font_color = Color(1, 0.95, 0.86, 1)
+outline_size = 16
+outline_color = Color(0.5, 0.3, 0.165, 1)
+
+[node name="Boss" type="Node2D"]
+script = ExtResource("1_boss")
+
+[node name="Fundo" type="Sprite2D" parent="."]
+texture = ExtResource("3_fundo")
+centered = false
+
+[node name="Pista" type="Node2D" parent="."]
+script = ExtResource("2_pista")
+
+[node name="Dino" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 174)
+sprite_frames = ExtResource("4_dino")
+animation = &"parado"
+
+[node name="Ourico" type="AnimatedSprite2D" parent="."]
+position = Vector2(960, 883)
+sprite_frames = ExtResource("5_ourico")
+animation = &"respirando"
+
+[node name="NomeDino" type="Label" parent="."]
+offset_left = 600.0
+offset_top = 340.0
+offset_right = 852.0
+offset_bottom = 386.0
+text = "rei dino"
+label_settings = SubResource("LabelSettings_nome")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BarraDino" type="TextureProgressBar" parent="."]
+offset_left = 864.0
+offset_top = 346.0
+offset_right = 1196.0
+offset_bottom = 380.0
+value = 100.0
+texture_under = ExtResource("8_bfundo")
+texture_over = ExtResource("9_bcontorno")
+texture_progress = ExtResource("10_blaranja")
+
+[node name="NomeOurico" type="Label" parent="."]
+offset_left = 600.0
+offset_top = 688.0
+offset_right = 852.0
+offset_bottom = 734.0
+text = "ouriço"
+label_settings = SubResource("LabelSettings_nome")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BarraOurico" type="TextureProgressBar" parent="."]
+offset_left = 864.0
+offset_top = 694.0
+offset_right = 1196.0
+offset_bottom = 728.0
+value = 100.0
+texture_under = ExtResource("8_bfundo")
+texture_over = ExtResource("9_bcontorno")
+texture_progress = ExtResource("11_bverde")
+
+[node name="TextoVez" type="Label" parent="."]
+offset_left = 1380.0
+offset_top = 370.0
+offset_right = 1680.0
+offset_bottom = 418.0
+rotation = -0.035
+pivot_offset = Vector2(150, 24)
+text = "vez do dino"
+label_settings = SubResource("LabelSettings_vez")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextoFim" type="Label" parent="."]
+offset_top = 470.0
+offset_right = 1920.0
+offset_bottom = 610.0
+text = "tenta de novo..."
+label_settings = SubResource("LabelSettings_fim")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_musica")
+volume_db = -4.0
+
+[node name="Nuvem" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.875, 0.984, 0.827, 1)

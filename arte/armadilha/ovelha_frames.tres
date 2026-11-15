@@ -1,0 +1,95 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b0cumao6t5c7d"]
+
+[ext_resource type="Texture2D" uid="uid://1e645adbqoy7" path="res://arte/armadilha/ovelha_sheet.png" id="1_sheet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0l0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1l0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2l0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3l0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4l0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0l1"]
+atlas = ExtResource("1_sheet")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1l1"]
+atlas = ExtResource("1_sheet")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2l1"]
+atlas = ExtResource("1_sheet")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3l1"]
+atlas = ExtResource("1_sheet")
+region = Rect2(192, 64, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_c0l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4l0")
+}],
+"loop": 0,
+"name": &"aparecer",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3l1")
+}],
+"loop": 0,
+"name": &"atirar",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_c0l0")
+}],
+"loop": 1,
+"name": &"escondida",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_c0l1")
+}],
+"loop": 0,
+"name": &"parada",
+"speed": 1.0
+}]

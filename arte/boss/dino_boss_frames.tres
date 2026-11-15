@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://arte/boss/dino_boss_sheet.png" id="1_sheet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(0, 0, 330, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1"]
+atlas = ExtResource("1_sheet")
+region = Rect2(330, 0, 330, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2"]
+atlas = ExtResource("1_sheet")
+region = Rect2(660, 0, 330, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3"]
+atlas = ExtResource("1_sheet")
+region = Rect2(990, 0, 330, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4"]
+atlas = ExtResource("1_sheet")
+region = Rect2(1320, 0, 330, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5"]
+atlas = ExtResource("1_sheet")
+region = Rect2(1650, 0, 330, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6"]
+atlas = ExtResource("1_sheet")
+region = Rect2(1980, 0, 330, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7"]
+atlas = ExtResource("1_sheet")
+region = Rect2(2310, 0, 330, 360)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.4,
+"texture": SubResource("AtlasTexture_q0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_q4")
+}, {
+"duration": 0.9,
+"texture": SubResource("AtlasTexture_q5")
+}],
+"loop": 1,
+"name": &"parado",
+"speed": 1.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2")
+}, {
+"duration": 1.3,
+"texture": SubResource("AtlasTexture_q3")
+}],
+"loop": 1,
+"name": &"tocando",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_q7")
+}],
+"loop": 0,
+"name": &"dano",
+"speed": 6.0
+}]

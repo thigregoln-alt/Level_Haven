@@ -1,0 +1,7 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Builds e zips (pesados, nao vao para o GitHub)
+_builds/
+level-haven-codigo.zip

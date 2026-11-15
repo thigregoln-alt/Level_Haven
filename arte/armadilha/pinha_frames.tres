@@ -1,0 +1,98 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c2at4mhpf616"]
+
+[ext_resource type="Texture2D" uid="uid://np81kwsscydo" path="res://arte/armadilha/pinha_sheet.png" id="1_sheet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0l1"]
+atlas = ExtResource("1_sheet")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1l1"]
+atlas = ExtResource("1_sheet")
+region = Rect2(48, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2l1"]
+atlas = ExtResource("1_sheet")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3l1"]
+atlas = ExtResource("1_sheet")
+region = Rect2(144, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0l2"]
+atlas = ExtResource("1_sheet")
+region = Rect2(0, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1l2"]
+atlas = ExtResource("1_sheet")
+region = Rect2(48, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2l2"]
+atlas = ExtResource("1_sheet")
+region = Rect2(96, 96, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c0l0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1l0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2l0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3l0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(144, 0, 48, 48)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2l1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3l1")
+}],
+"loop": 0,
+"name": &"cair",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0l2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1l2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2l2")
+}],
+"loop": 0,
+"name": &"sumir",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c0l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c2l0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3l0")
+}],
+"loop": 1,
+"name": &"voar",
+"speed": 12.0
+}]

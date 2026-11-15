@@ -1,0 +1,63 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://arte/boss/ourico_costas_sheet.png" id="1_sheet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0"]
+atlas = ExtResource("1_sheet")
+region = Rect2(0, 0, 390, 330)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1"]
+atlas = ExtResource("1_sheet")
+region = Rect2(390, 0, 390, 330)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2"]
+atlas = ExtResource("1_sheet")
+region = Rect2(780, 0, 390, 330)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3"]
+atlas = ExtResource("1_sheet")
+region = Rect2(1170, 0, 390, 330)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4"]
+atlas = ExtResource("1_sheet")
+region = Rect2(1560, 0, 390, 330)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5"]
+atlas = ExtResource("1_sheet")
+region = Rect2(1950, 0, 390, 330)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_q0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1")
+}],
+"loop": 1,
+"name": &"respirando",
+"speed": 1.6
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4")
+}],
+"loop": 0,
+"name": &"tocando",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3")
+}, {
+"duration": 1.4,
+"texture": SubResource("AtlasTexture_q5")
+}],
+"loop": 0,
+"name": &"susto",
+"speed": 5.0
+}]

@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://cnpq3tthtjih3"]
+
+[ext_resource type="Script" uid="uid://le21ndaq1ovq" path="res://scripts/jogador.gd" id="1_script"]
+[ext_resource type="SpriteFrames" uid="uid://c1s6v2jre5axw" path="res://arte/jogador/ourico_frames.tres" id="2_frames"]
+[ext_resource type="AudioStream" uid="uid://d1hl1bf02wfuy" path="res://sons/efeitos/som_morrer.wav" id="3_morrer"]
+[ext_resource type="Script" uid="uid://c2urphj1wygfp" path="res://cenas/label.gd" id="3_w748s"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e2y2p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sm7ab"]
+radius = 30.0
+height = 60.0
+
+[sub_resource type="GDScript" id="GDScript_81edp"]
+script/source = "extends Camera2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="Jogador" type="CharacterBody2D" unique_id=567738269]
+motion_mode = 1
+script = ExtResource("1_script")
+
+[node name="Label" type="Label" parent="." unique_id=81649138]
+offset_left = -76.0
+offset_top = 84.0
+offset_right = 15.0
+offset_bottom = 110.0
+text = "mortes"
+label_settings = SubResource("LabelSettings_e2y2p")
+autowrap_mode = 2
+script = ExtResource("3_w748s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2029151337]
+position = Vector2(50.000004, 47)
+scale = Vector2(2.1875, 2.0625)
+sprite_frames = ExtResource("2_frames")
+animation = &"pular"
+frame = 3
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=579326541]
+position = Vector2(49, 47)
+shape = SubResource("CapsuleShape2D_sm7ab")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1893471202]
+position = Vector2(6, -12)
+limit_left = 2
+limit_top = -6960
+limit_right = 1546
+limit_bottom = 657
+limit_smoothed = true
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+script = SubResource("GDScript_81edp")
+
+[node name="SomMorrer" type="AudioStreamPlayer" parent="." unique_id=863450186]
+stream = ExtResource("3_morrer")

@@ -1,0 +1,130 @@
+[gd_scene format=3 uid="uid://br1lm5yffxrtm"]
+
+[ext_resource type="Texture2D" uid="uid://cne54yyd4c1p3" path="res://arte/fundos/fase1_caminho.png" id="1_fundo"]
+[ext_resource type="PackedScene" uid="uid://cnpq3tthtjih3" path="res://cenas/Jogador.tscn" id="2_jogador"]
+[ext_resource type="PackedScene" path="res://cenas/ovelha.tscn" id="3_ovelha"]
+[ext_resource type="Texture2D" uid="uid://byehqmcx3h06i" path="res://arte/fundos/nuvem_inicio.png" id="4_nuvemi"]
+[ext_resource type="Texture2D" uid="uid://bsk008nd65wxa" path="res://arte/fundos/nuvem_fim.png" id="5_nuvemf"]
+[ext_resource type="AudioStream" uid="uid://bqbadx0e58m1v" path="res://sons/musicas/musica_lofi_outono.wav" id="7_musica"]
+[ext_resource type="Script" uid="uid://gwd3i0810tms" path="res://scripts/musica.gd" id="8_musica"]
+[ext_resource type="PackedScene" path="res://cenas/buraco.tscn" id="9_buraco"]
+[ext_resource type="PackedScene" path="res://cenas/buraco2.tscn" id="10_buraco2"]
+[ext_resource type="Texture2D" uid="uid://tcgl7jvj3msb" path="res://arte/fundos/fase_final_castelo.png" id="11_castelo"]
+[ext_resource type="Script" uid="uid://clde3a3c5ma2c" path="res://scripts/fim.gd" id="12_fim"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inicio"]
+size = Vector2(1560, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gatilho"]
+size = Vector2(1560, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fachada"]
+size = Vector2(1750, 1092)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ladoesq"]
+size = Vector2(390, 4670)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ladodir"]
+size = Vector2(380, 4670)
+
+[node name="Fase_01" type="Node2D" unique_id=69906808]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=735256325]
+z_index = -1
+position = Vector2(773.99994, -835.5002)
+scale = Vector2(0.8041666, 0.69097215)
+texture = ExtResource("1_fundo")
+
+[node name="Paredes" type="StaticBody2D" parent="Sprite2D" unique_id=316213339]
+
+[node name="ParedeEsquerda" type="CollisionPolygon2D" parent="Sprite2D/Paredes" unique_id=74922331]
+polygon = PackedVector2Array(-1360, -2160, 363.6, -2160, 357.8, -2128, 231.1, -2000, 222.7, -1956, 254.7, -1888, 414.2, -1836, 459.1, -1796, 572, -1744, 600.9, -1708, 618.2, -1656, 618.7, -1620, 600, -1592, 553.3, -1560, 465.8, -1528, -11.1, -1444, -152.4, -1396, -350.7, -1360, -432.4, -1336, -597.3, -1244, -742.2, -1108, -776.9, -1056, -777.3, -1012, -656.4, -976, -652.4, -956, -667.6, -908, -544.4, -872, -527.1, -852, -407.1, -816, -392, -804, -367.1, -764, -372, -676, -355.6, -652, -314.7, -632, -152.9, -596, -40.4, -536, 68.9, -492, 127.1, -436, 148, -372, 146.7, -340, 135.6, -320, 53.3, -272, 23.6, -232, -93.3, -196, -115.1, -180, -132, -120, -123.1, -80, -32, -12, 14.2, 48, 87.6, 84, 108.9, 136, 109.3, 164, 16, 208, 76.4, 648, 76.9, 716, 24, 796, -144, 948, -393.3, 1204, -487.6, 1324, -512, 1380, -548.9, 1420, -583.1, 1484, -630.7, 1624, -652, 1768, -651.6, 1816, -601.3, 1852, -592, 1876, -592.4, 1896, -648, 1936, -621.8, 2160, -1360, 2160)
+
+[node name="ParedeDireita" type="CollisionPolygon2D" parent="Sprite2D/Paredes" unique_id=216865793]
+polygon = PackedVector2Array(1360, -2160, 490.2, -2160, 486.2, -2124, 398.7, -2012, 396.4, -1980, 413.8, -1960, 511.6, -1908, 708, -1836, 756, -1796, 816.9, -1712, 818.7, -1664, 772.4, -1596, 827.1, -1560, 820.9, -1524, 752, -1432, 720, -1412, 421.3, -1332, 260.9, -1300, 43.1, -1228, -74.2, -1124, -95.1, -1060, -92.9, -1032, -59.1, -984, 23.1, -944, 432.4, -856, 508.9, -832, 596.9, -780, 625.8, -744, 708.9, -704, 737.3, -676, 813.3, -556, 877.3, -488, 915.1, -324, 916, -276, 883.1, -184, 853.3, -160, 764.9, -124, 748.4, -96, 754.7, -72, 790.2, -32, 823.6, 32, 840, 116, 836.9, 208, 757.3, 348, 762.7, 436, 676.4, 488, 594.7, 524, 588.4, 540, 600.4, 568, 732.9, 608, 794.2, 636, 795.6, 684, 786.7, 704, 749.3, 752, 676.9, 788, 656.9, 824, 665.3, 860, 736.9, 936, 732, 988, 676, 1084, 615.6, 1160, 408, 1352, 298.7, 1476, 72.9, 1780, 54.7, 1840, 52, 1908, 91.6, 2160, 1360, 2160)
+
+[node name="ParedeBaixo" type="CollisionPolygon2D" parent="Sprite2D/Paredes" unique_id=200486443]
+polygon = PackedVector2Array(-1360, 2160, 1360, 2160, 1360, 2560, -1360, 2560)
+
+[node name="Jogador" parent="." unique_id=567738269 instance=ExtResource("2_jogador")]
+position = Vector2(529, 422)
+
+[node name="Ovelha" parent="." unique_id=1376073117 instance=ExtResource("3_ovelha")]
+position = Vector2(243, -241)
+
+[node name="AnimatedSprite2D" parent="Ovelha" index="0"]
+animation = &"parada"
+
+[node name="NuvemInicio" type="Sprite2D" parent="." unique_id=705917611]
+z_index = 5
+position = Vector2(774, 620)
+texture = ExtResource("4_nuvemi")
+
+[node name="BarreiraInicio" type="StaticBody2D" parent="." unique_id=1773489018]
+position = Vector2(774, 635)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarreiraInicio" unique_id=815496493]
+shape = SubResource("RectangleShape2D_inicio")
+
+[node name="NuvemFim" type="Sprite2D" parent="." unique_id=293388242]
+z_index = 5
+position = Vector2(774, -2328)
+texture = ExtResource("5_nuvemf")
+
+[node name="Fim" type="Area2D" parent="." unique_id=1873322802]
+position = Vector2(774, -2300)
+script = ExtResource("12_fim")
+proxima_cena = "res://cenas/fases/labirinto.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fim" unique_id=828337890]
+shape = SubResource("RectangleShape2D_gatilho")
+
+[node name="Tela" type="CanvasLayer" parent="Fim" unique_id=227170856]
+layer = 10
+
+[node name="Nuvem" type="ColorRect" parent="Fim/Tela" unique_id=1948849799]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.875, 0.984, 0.827, 0)
+
+[node name="Musica" type="AudioStreamPlayer" parent="." unique_id=134148397]
+stream = ExtResource("7_musica")
+volume_db = -8.0
+autoplay = true
+script = ExtResource("8_musica")
+
+[node name="Ovelha2" parent="." unique_id=369069838 instance=ExtResource("3_ovelha")]
+position = Vector2(1337, -1381)
+por_proximidade = true
+
+[node name="Buraco" parent="." unique_id=975555307 instance=ExtResource("9_buraco")]
+position = Vector2(1070, -500)
+
+[node name="Buraco2" parent="." unique_id=867517038 instance=ExtResource("10_buraco2")]
+position = Vector2(500, -1610)
+
+[node name="FaseFinal" type="Sprite2D" parent="." unique_id=1593537702]
+z_index = -1
+position = Vector2(774, -4644)
+scale = Vector2(2.1325967, 2.1325967)
+texture = ExtResource("11_castelo")
+
+[node name="ParedesFinal" type="StaticBody2D" parent="." unique_id=1953228434]
+
+[node name="Fachada" type="CollisionShape2D" parent="ParedesFinal" unique_id=736810121]
+position = Vector2(774, -6615)
+shape = SubResource("RectangleShape2D_fachada")
+
+[node name="LadoEsquerdo" type="CollisionShape2D" parent="ParedesFinal" unique_id=1321254337]
+position = Vector2(-105, -4663)
+shape = SubResource("RectangleShape2D_ladoesq")
+
+[node name="LadoDireito" type="CollisionShape2D" parent="ParedesFinal" unique_id=1897570277]
+position = Vector2(1660, -4663)
+shape = SubResource("RectangleShape2D_ladodir")
+
+[editable path="Ovelha"]
