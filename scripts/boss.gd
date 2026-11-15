@@ -22,6 +22,7 @@ var turno_atual = ""
 var acabou = false
 var posicao_ourico = Vector2.ZERO
 var tween_respirar = null
+var tempo_inicio = 0
 
 
 func _ready():
@@ -52,6 +53,7 @@ func _ready():
 	tween.tween_property($Nuvem, "color:a", 0.0, 1.0)
 
 	$Musica.play()
+	tempo_inicio = Time.get_ticks_msec()
 
 
 func _process(delta):
@@ -79,9 +81,8 @@ func _process(delta):
 
 
 func tempo_musica():
-	var tempo = $Musica.get_playback_position()
-	tempo = tempo + AudioServer.get_time_since_last_mix()
-	tempo = tempo - AudioServer.get_output_latency()
+	#conta o tempo desde que a musica comecou (no navegador a posicao da musica vem errada)
+	var tempo = (Time.get_ticks_msec() - tempo_inicio) / 1000.0
 	return tempo
 
 
